@@ -16,23 +16,23 @@ Request Type	|Action	|URL	|Request Body	|Request Header	|Access
 |POST	|login User	|/auth/user/login	|User login Info	|None	|PUBLIC
 |PUT	|update User	|/auth/user/	|User Details	|Authorization Bearer TOKEN	|PRIVATE
 |DELETE	|delete User	|/auth/user/	|None	|Authorization Bearer TOKEN	|PRIVATE
-|GET	|gets all tasks	|/api/user/{userId}/category/{catgoryid}/tasks	|None	|Authorization Bearer TOKEN	|PRIVATE
-|GET	|get single task	|/api/user/{userId}/category/{catgoryid}/tasks/(tasks1}	|None	|Authorization Bearer TOKEN	|PRIVATE
-|POST	|create single task	|/api/user/{userId}/category/{catgoryid}/tasks	|Task info	|Authorization Bearer TOKEN	|PRIVATE
-|PUT	|update task	|/api/user/{userId}/category/{catgoryid}/tasks/(tasks1}	|Task info	|Authorization Bearer TOKEN	|PRIVATE
-|DELETE	|delete task	|/api/user/{userId}/category/{catgoryid}/tasks/(tasks1}	|None	|Authorization Bearer TOKEN	|PRIVATE
-|GET	|get all Categories	|/api/user/{userId}/category	|None	|None	|PUBLIC
-|GET	|get single Categories	|/api/user/{userId}/category/{catgoryid}	|None	|None	|PUBLIC
-|POST	|create single Categories	|/api/user/{userId}/category	|Podcast info	|None	|ADMIN
-|PUT	|update Categories	|/api/user/{userId}/category/{catgoryid}	|Podcast info	|Authorization Bearer TOKEN	|ADMIN
-|DELETE	|delete Categories	|/api/user/{userId}/category/{catgoryid}	|None	|Authorization Bearer TOKEN	|ADMIN
-|GET	|get all Resources	|/api/user/{userId}/type/{typeid}/resources	|None	|None	|PUBLIC
-|GET	|get single Resource	|/api/user/{userId}/type/{typeid}/resources/{resourcesid}	|None	|None	|PUBLIC
-|POST	|create  Resource	|/api/user/{userId}/type/{typeid}/resources	|Resource info	|Authorization Bearer TOKEN	|ADMIN
-|PUT	|update Resource	|/api/user/{userId}/type/{typeid}/resources/{resourcesid}	|Resource info	|Authorization Bearer TOKEN	|ADMIN
-|DELETE	|delete Resource	|/api/user/{userId}/type/{typeid}/resources/{resourcesid}	|None	|Authorization Bearer TOKEN	|ADMIN
-|GET	|get all Types	|/api/user/{userId}/type	|None	|None	|PUBLIC
-|GET	|get single Type	|/api/user/{userId}/type/{typeid}	|None	|None	|PUBLIC
-|POST	|create Type	|/api/user/{userId}/type	|Type info	|Authorization Bearer TOKEN	|ADMIN
-|PUT	|update Type	|/api/user/{userId}/type/{typeid}	|Type info	|Authorization Bearer TOKEN	|ADMIN
-|DELETE	|delete Type	|/api/user/{userId}/type/{typeid}	|None	|Authorization Bearer TOKEN	|ADMIN
+|GET	|gets all tasks	|/api/user/{userId}/categories/{catgoryid}/tasks	|None	|Authorization Bearer TOKEN	|PRIVATE
+|GET	|get single task	|/api/user/{userId}/categories/{catgoryid}/tasks/(tasks1}	|None	|Authorization Bearer TOKEN	|PRIVATE
+|POST	|create single task	|/api/user/{userId}/categories/{catgoryid}/tasks	|Task info	|Authorization Bearer TOKEN	|PRIVATE
+|PUT	|update task	|/api/user/{userId}/categories/{catgoryid}/tasks/(tasks1}	|Task info	|Authorization Bearer TOKEN	|PRIVATE
+|DELETE	|delete task	|/api/user/{userId}/categories/{catgoryid}/tasks/(tasks1}	|None	|Authorization Bearer TOKEN	|PRIVATE
+|GET	|get all Categories	|/api/user/{userId}/categories	|None	|None	|PUBLIC
+|GET	|get single Categories	|/api/user/{userId}/categories/{catgoryid}	|None	|None	|PUBLIC
+|POST	|create single Categories	|/api/user/{userId}/categories	|Podcast info	|None	|ADMIN
+|PUT	|update Categories	|/api/user/{userId}/categories/{catgoryid}	|Podcast info	|Authorization Bearer TOKEN	|ADMIN
+|DELETE	|delete Categories	|/api/user/{userId}/categories/{catgoryid}	|None	|Authorization Bearer TOKEN	|ADMIN
+|GET	|get all Resources	|/api/user/{userId}/types/{typeid}/resources	|None	|None	|PUBLIC
+|GET	|get single Resource	|/api/user/{userId}/types/{typeid}/resources/{resourcesid}	|None	|None	|PUBLIC
+|POST	|create  Resource	|/api/user/{userId}/types/{typeid}/resources	|Resource info	|Authorization Bearer TOKEN	|ADMIN
+|PUT	|update Resource	|/api/user/{userId}/types/{typeid}/resources/{resourcesid}	|Resource info	|Authorization Bearer TOKEN	|ADMIN
+|DELETE	|delete Resource	|/api/user/{userId}/types/{typeid}/resources/{resourcesid}	|None	|Authorization Bearer TOKEN	|ADMIN
+|GET	|get all Types	|/api/user/{userId}/types	|None	|None	|PUBLIC
+|GET	|get single Type	|/api/user/{userId}/types/{typeid}	|None	|None	|PUBLIC
+|POST	|create Type	|/api/user/{userId}/types	|Type info	|Authorization Bearer TOKEN	|ADMIN
+|PUT	|update Type	|/api/user/{userId}/types/{typeid}	|Type info	|Authorization Bearer TOKEN	|ADMIN
+|DELETE	|delete Type	|/api/user/{userId}/types/{typeid}	|None	|Authorization Bearer TOKEN	|ADMIN
