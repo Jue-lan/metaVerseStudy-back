@@ -11,13 +11,13 @@ A to do list, study log, and information hub for all things related to the meta 
 
 Request Type	|Action	|URL	|Request Body	|Request Header	|Access
 ------------ |------------ | ------------- | ------------- | ------------- | -------------
-|GET	|get single User	|/auth/user/...	|None	|Authorization Bearer TOKEN	|PRIVATE
+|GET	|get single User	|/auth/user/	|None	|Authorization Bearer TOKEN	|PRIVATE
 |POST	|create single User	|/api/register	|User Details	|None	|PUBLIC
 |POST	|login User	|/api/login	|User login Info	|None	|PUBLIC
-|PUT	|update User	|/auth/user/...	|User Details	|Authorization Bearer TOKEN	|PRIVATE
-|DELETE	|delete User	|/auth/user/...	|None	|Authorization Bearer TOKEN	|PRIVATE
+|PUT	|update User	|/auth/user/	|User Details	|Authorization Bearer TOKEN	|PRIVATE
+|DELETE	|delete User	|/auth/user/	|None	|Authorization Bearer TOKEN	|PRIVATE
 |GET	|gets all tasks	|/auth/user/{userId}/category/{catgoryid}/tasks	|None	|Authorization Bearer TOKEN	|PRIVATE
-GET	|get single task	|/auth/user/{userId}/category/{catgoryid}/tasks/(tasks1}	|None	|Authorization Bearer TOKEN	|PRIVATE
+|GET	|get single task	|/auth/user/{userId}/category/{catgoryid}/tasks/(tasks1}	|None	|Authorization Bearer TOKEN	|PRIVATE
 |POST	|create single task	|/auth/user/{userId}/category/{catgoryid}/tasks	|Task info	|Authorization Bearer TOKEN	|PRIVATE
 |PUT	|update task	|/auth/user/{userId}/category/{catgoryid}/tasks/(tasks1}	|Task info	|Authorization Bearer TOKEN	|PRIVATE
 |DELETE	|delete task	|/auth/user/{userId}/category/{catgoryid}/tasks/(tasks1}	|None	|Authorization Bearer TOKEN	|PRIVATE
