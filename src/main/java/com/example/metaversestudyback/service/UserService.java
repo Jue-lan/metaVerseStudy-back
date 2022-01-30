@@ -2,6 +2,7 @@ package com.example.metaversestudyback.service;
 
 import com.example.metaversestudyback.exception.InformationExistException;
 import com.example.metaversestudyback.model.Request.LoginRequest;
+import com.example.metaversestudyback.model.Response.LoginResponse;
 import com.example.metaversestudyback.model.User;
 import com.example.metaversestudyback.repository.UserRepository;
 import com.example.metaversestudyback.security.JWTUtils;
