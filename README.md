@@ -12,7 +12,6 @@ A to do list, study log, and information hub for all things related to the meta 
 
 Request Type    |Action    |URL    |Request Body    |Request Header    |Access
 ------------ |------------ | ------------- | ------------- | ------------- | -------------
-
 |GET	|get single User	|/auth/user/	|None	|Authorization Bearer TOKEN	|PRIVATE
 |POST	|create single User	|/auth/user/register	|User Details	|None	|PUBLIC
 |POST	|login User	|/auth/user/login	|User login Info	|None	|PUBLIC
