@@ -38,7 +38,7 @@ public class TypeController {
     // get type
     // http://localhost:9092/api/user/{userId}/types/{typeid}
     @GetMapping(path = "/types/{typeId}")
-    public Category getType(@PathVariable Long typeId) {
+    public Type getType(@PathVariable Long typeId) {
         LOGGER.info("calling getType method from controller");
         return typeService.getType(typeId);
     }

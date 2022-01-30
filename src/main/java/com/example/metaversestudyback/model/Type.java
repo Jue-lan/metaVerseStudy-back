@@ -1,4 +1,4 @@
-package com.example.metaversestudyback.model.Response;
+package com.example.metaversestudyback.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.LazyCollection;
@@ -8,8 +8,8 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "categories")
-public class Category {
+@Table(name = "types")
+public class Type {
     @Id
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,25 +18,22 @@ public class Category {
     @Column
     private String name;
 
-    @Column
-    private String description;
 
-    @OneToMany(mappedBy = "category", orphanRemoval = true)
+    @OneToMany(mappedBy = "type", orphanRemoval = true)
     @LazyCollection(LazyCollectionOption.FALSE)
-    private List<Item> itemList;
+    private List<Resource> resourceList;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
     @JsonIgnore
     private User user;
 
-    public Category(Long id, String name, String description) {
+    public Type(Long id, String name) {
         this.id = id;
         this.name = name;
-        this.description = description;
     }
 
-    public Category() {
+    public Type() {
 
     }
 
@@ -56,29 +53,21 @@ public class Category {
         this.name = name;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
 
     @Override
     public String toString() {
-        return "Category{" +
+        return "Type{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", description='" + description + '\'' +
                 '}';
     }
 
-    public List<Item> getItemList() {
-        return itemList;
+    public List<Resource> getResourceList() {
+        return resourceList;
     }
 
-    public void setItemList(List<Item> itemList) {
-        this.itemList = itemList;
+    public void setResourceList(List<Resource> resourceList) {
+        this.resourceList = resourceList;
     }
 
     public User getUser() {
