@@ -54,7 +54,6 @@ public class Task {
         this.id = id;
     }
 
-    public Long getTaskCategory(){return category;}
 
     public String getTitle() {
         return title;
@@ -75,7 +74,7 @@ public class Task {
 
     @Override
     public String toString() {
-        return "Item{" +
+        return "Task{" +
                 "id=" + id +
                 ", category='" + category + '\'' +
                 ", title='" + title + '\'' +

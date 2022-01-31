@@ -90,7 +90,7 @@ public class CategoryController {
     public Task createCategoryTask(
             @PathVariable(value = "categoryId") Long categoryId,
             @RequestBody Task taskObject) {
-        LOGGER.info("calling createCategoryItem method from controller");
+        LOGGER.info("calling createCategoryTask method from controller");
         return categoryService.createCategoryTask(categoryId, taskObject);
     }
 
@@ -98,7 +98,7 @@ public class CategoryController {
     // http://localhost:9093/api/categories/{categoryId}/tasks/{taskId}
     @PutMapping(path = "categories/{categoryId}/tasks/{taskId}")
     public Task updateCategoryTask(@PathVariable(value = "categoryId") Long categoryId,
-                                   @PathVariable(value = "itemId") Long taskId,
+                                   @PathVariable(value = "taskId") Long taskId,
                                    @RequestBody Task taskObject) {
         LOGGER.info("calling updateCategoryTask method from controller");
         return categoryService.updateCategoryTask(categoryId, taskId, taskObject);

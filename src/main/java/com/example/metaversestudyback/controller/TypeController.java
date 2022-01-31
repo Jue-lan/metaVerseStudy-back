@@ -106,7 +106,7 @@ public class TypeController {
 
     // delete resource
     // http://localhost:9092/api/{userId}/types/{typeid}/resources/{resourcesid}
-    @DeleteMapping(path = "/types/{categoryId}/Resources/{resourceId}")
+    @DeleteMapping(path = "/types/{typeId}/Resources/{resourceId}")
     public Resource deleteTypeResource(@PathVariable(value = "typeId") Long typeId,
                                    @PathVariable(value = "resourceId") Long resourceId) {
         LOGGER.info("calling deleteTypeResource method from controller");
