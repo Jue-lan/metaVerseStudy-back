@@ -28,11 +28,11 @@ public class CategoryService {
     public void setCategoryRepository(CategoryRepository categoryRepository) {
         this.categoryRepository = categoryRepository;
     }
-
     @Autowired
     public void setTaskRepository(TaskRepository taskRepository) {
         this.taskRepository = taskRepository;
     }
+
 
     public List<Category> getCategories() {
         LOGGER.info("service calling getCategories ==>");
@@ -179,4 +179,7 @@ public class CategoryService {
         }
         return null;
     }
+
+
+
 }

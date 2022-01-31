@@ -18,13 +18,14 @@ import java.util.logging.Logger;
 @RestController
 @RequestMapping(path = "/api")
 public class CategoryController {
+
     private CategoryService categoryService;
     private static final Logger LOGGER = Logger.getLogger(CategoryController.class.getName());
 
-    @Autowired
-    public void setCategoryService(CategoryService categoryService) {
-        this.categoryService = categoryService;
-    }
+//    @Autowired
+//    public void setCategoryService(CategoryService categoryService) {
+//        this.categoryService = categoryService;
+//    }
 
     // get all categories
     // http://localhost:9092/api/user/{userId}/categories
