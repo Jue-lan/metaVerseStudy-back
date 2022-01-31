@@ -22,13 +22,13 @@ public class CategoryController {
     private CategoryService categoryService;
     private static final Logger LOGGER = Logger.getLogger(CategoryController.class.getName());
 
-//    @Autowired
-//    public void setCategoryService(CategoryService categoryService) {
-//        this.categoryService = categoryService;
-//    }
+    @Autowired
+    public void setCategoryService(CategoryService categoryService) {
+        this.categoryService = categoryService;
+    }
 
     // get all categories
-    // http://localhost:9092/api/user/{userId}/categories
+    // http://localhost:9093/api/categories
     @GetMapping("/categories")
     public List<Category> getCategories() {
         LOGGER.info("calling getCategories method from controller");
@@ -36,7 +36,7 @@ public class CategoryController {
     }
 
     // get category
-    // http://localhost:9092/api/user/{userId}/categories/{categoryId}
+    // http://localhost:9093/api/categories/{categoryId}
     @GetMapping(path = "/categories/{categoryId}")
     public Category getCategory(@PathVariable Long categoryId) {
         LOGGER.info("calling getCategory method from controller");
@@ -44,7 +44,7 @@ public class CategoryController {
     }
 
     //create category
-    //http://localhost:9092/api/{userId}/categories
+    //http://localhost:9093/api/categories
     @PostMapping(path = "/categories")
     public Category createCategory(@RequestBody Category categoryObject) {
         LOGGER.info("calling createCategory method from controller");
@@ -52,7 +52,7 @@ public class CategoryController {
     }
 
     // update category
-    // http://localhost:9092/{userId}/categories/{categoryId}
+    // http://localhost:9093/api/categories/{categoryId}
     @PutMapping(path = "/categories/{categoryId}")
     public Category updateCategory(@PathVariable(value = "categoryId") Long categoryId, @RequestBody Category categoryObject) {
         LOGGER.info("calling updateCategory method from controller");
@@ -60,7 +60,7 @@ public class CategoryController {
     }
 
     //delete category
-    // http://localhost:9092/api/{userId}/categories/{categoryId}
+    // http://localhost:9093/api/categories/{categoryId}
     @DeleteMapping("/categories/{categoryId}")
     public Category deleteCategory(@PathVariable(value = "categoryId") Long categoryId) {
         LOGGER.info("calling deleteCategory method from controller");
@@ -68,7 +68,7 @@ public class CategoryController {
     }
 
     // get all tasks
-    // http://localhost:9092/api/{userId}/categories/{categoryId}/tasks
+    // http://localhost:9093/api/categories/{categoryId}/tasks
     @GetMapping(path = "/categories/{categoryId}/tasks")
     public List<Task> getCategoryTasks(@PathVariable(value = "categoryId") Long categoryId) {
         LOGGER.info("calling getCategoryTasks method from controller");
@@ -76,7 +76,7 @@ public class CategoryController {
     }
 
     // get task
-    // http://localhost:9092/api/{userId}/categories/{categoryId}/tasks/{taskId}
+    // http://localhost:9093/api/categories/{categoryId}/tasks/{taskId}
     @GetMapping(path = "/categories/{categoryId}/tasks/{taskId}")
     public Task getCategoryTask(@PathVariable(value = "categoryId") Long categoryId,
                                 @PathVariable(value = "taskId") Long taskId) {
@@ -85,7 +85,7 @@ public class CategoryController {
     }
 
     //create task
-    // http://localhost:9092/api/user/{userId}/categories/{categoryId}/tasks
+    // http://localhost:9093/api/categories/{categoryId}/tasks
     @PostMapping("/categories/{categoryId}/tasks")
     public Task createCategoryTask(
             @PathVariable(value = "categoryId") Long categoryId,
@@ -95,8 +95,8 @@ public class CategoryController {
     }
 
     //update task
-    // http://localhost:9092/api/{userId}/categories/{categoryId}/tasks/{taskId}
-    @PutMapping(path = "/categories/{categoryId}/tasks/{taskId}")
+    // http://localhost:9093/api/categories/{categoryId}/tasks/{taskId}
+    @PutMapping(path = "categories/{categoryId}/tasks/{taskId}")
     public Task updateCategoryTask(@PathVariable(value = "categoryId") Long categoryId,
                                    @PathVariable(value = "itemId") Long taskId,
                                    @RequestBody Task taskObject) {
@@ -105,7 +105,7 @@ public class CategoryController {
     }
 
     // delete task
-    // http://localhost:9092/api/{userId}/categories/{categoryId}/tasks/{taskId}
+    // http://localhost:9093/api/categories/{categoryId}/tasks/{taskId}
     @DeleteMapping(path = "/categories/{categoryId}/tasks/{taskId}")
     public Task deleteCategoryTask(@PathVariable(value = "categoryId") Long categoryId,
                                    @PathVariable(value = "taskId") Long taskId) {

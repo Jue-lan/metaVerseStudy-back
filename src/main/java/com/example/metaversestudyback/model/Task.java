@@ -54,6 +54,8 @@ public class Task {
         this.id = id;
     }
 
+    public Long getTaskCategory(){return category;}
+
     public String getTitle() {
         return title;
     }

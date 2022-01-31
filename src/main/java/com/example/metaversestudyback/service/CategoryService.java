@@ -137,7 +137,7 @@ public class CategoryService {
                 .getPrincipal();
         Category category = categoryRepository.findByIdAndUserId(categoryId, userDetails.getUser().getId());
         try {
-            Task task = taskRepository.findByNameAndUserId(taskObject.getTitle(), userDetails.getUser().getId());
+            Task task = taskRepository.findByTitleAndUserId(taskObject.getTitle(), userDetails.getUser().getId());
             if (task != null) {
                 throw new InformationExistException("task with title " + task.getTitle() + " already exists");
             }

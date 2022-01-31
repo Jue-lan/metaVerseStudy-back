@@ -18,8 +18,8 @@ public class UserProfile {
     @Column
     private String lastName;
 
-//    @Column
-//    private String profileDescription;
+    @Column
+    private String profileDescription;
 
     @JsonIgnore
     @OneToOne(mappedBy = "userProfile")
@@ -40,7 +40,7 @@ public class UserProfile {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
-//        this.profileDescription = profileDescription;
+        this.profileDescription = profileDescription;
     }
 
     public Long getId() {
@@ -73,15 +73,15 @@ public class UserProfile {
                 "id=" + id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
-//                ", profileDescription='" + profileDescription + '\'' +
+                ", profileDescription='" + profileDescription + '\'' +
                 '}';
     }
 
-//    public String getProfileDescription() {
-//        return profileDescription;
-//    }
-//
-//    public void setProfileDescription(String profileDescription) {
-//        this.profileDescription = profileDescription;
-//    }
+    public String getProfileDescription() {
+        return profileDescription;
+    }
+
+    public void setProfileDescription(String profileDescription) {
+        this.profileDescription = profileDescription;
+    }
 }

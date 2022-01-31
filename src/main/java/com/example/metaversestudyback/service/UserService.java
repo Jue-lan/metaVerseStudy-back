@@ -4,6 +4,7 @@ import com.example.metaversestudyback.exception.InformationExistException;
 import com.example.metaversestudyback.model.Request.LoginRequest;
 import com.example.metaversestudyback.model.Response.LoginResponse;
 import com.example.metaversestudyback.model.User;
+
 import com.example.metaversestudyback.repository.UserRepository;
 import com.example.metaversestudyback.security.JWTUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,16 +51,6 @@ public class UserService {
         }
     }
 
-//    public UserProfile createProfile(User userObject, UserProfile profileObject){
-//        LOGGER.info("calling createProfile method from service");
-//        if(userRepository.existsByEmailAddress(userObject.getEmailAddress())) {
-//            profileObject.setFirstName(profileObject.getFirstName());
-//            profileObject.setLastName(profileObject.getLastName());
-//            profileObject.setProfileDescription(profileObject.getProfileDescription());
-//            S save = userRepository.save(profileObject);
-//            return save;
-//        }
-//    }
 
     public ResponseEntity<?> loginUser(LoginRequest loginRequest){
         LOGGER.info("calling loginUser method from service");
