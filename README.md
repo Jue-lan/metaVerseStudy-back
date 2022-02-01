@@ -4,6 +4,8 @@
 
 A to do list, study log, and information hub for all things related to the meta verse.
 
+### Tools
+
 ## ERD
 
 ![MetaVerseStudy ERD (3)](https://user-images.githubusercontent.com/72534273/151443953-da3bca20-06ba-4fca-b1b7-344c52cf65d6.png)
@@ -38,3 +40,7 @@ Request Type    |Action    |URL    |Request Body    |Request Header    |Access
 |PUT	|update Type	|/api/types/{typeid}	|Type info	|Authorization Bearer TOKEN	|ADMIN
 |DELETE	|delete Type	|/api/types/{typeid}	|None	|Authorization Bearer TOKEN	|ADMIN
 
+## Project Progression
+
+
+## Hurdles and Achievements
