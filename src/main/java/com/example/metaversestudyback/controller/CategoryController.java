@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.logging.Logger;
 
 
@@ -38,7 +39,7 @@ public class CategoryController {
     // get category
     // http://localhost:9093/api/categories/{categoryId}
     @GetMapping(path = "/categories/{categoryId}")
-    public Category getCategory(@PathVariable Long categoryId) {
+    public Optional getCategory(@PathVariable Long categoryId) {
         LOGGER.info("calling getCategory method from controller");
         return categoryService.getCategory(categoryId);
     }
@@ -62,7 +63,7 @@ public class CategoryController {
     //delete category
     // http://localhost:9093/api/categories/{categoryId}
     @DeleteMapping("/categories/{categoryId}")
-    public Category deleteCategory(@PathVariable(value = "categoryId") Long categoryId) {
+    public Optional<Category> deleteCategory(@PathVariable(value = "categoryId") Long categoryId) {
         LOGGER.info("calling deleteCategory method from controller");
         return categoryService.deleteCategory(categoryId);
     }

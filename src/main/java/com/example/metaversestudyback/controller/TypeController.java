@@ -38,7 +38,7 @@ public class TypeController {
     // get type
     // http://localhost:9092/api/user/{userId}/types/{typeid}
     @GetMapping(path = "/types/{typeId}")
-    public Type getType(@PathVariable Long typeId) {
+    public Optional getType(@PathVariable Long typeId) {
         LOGGER.info("calling getType method from controller");
         return typeService.getType(typeId);
     }
@@ -62,7 +62,7 @@ public class TypeController {
     //delete type
     // http://localhost:9092/api/{userId}/types/{typeid}
     @DeleteMapping("/types/{typeId}")
-    public Type deleteType(@PathVariable(value = "typeId") Long typeId) {
+    public Optional<Type> deleteType(@PathVariable(value = "typeId") Long typeId) {
         LOGGER.info("calling deleteType method from controller");
         return typeService.deleteType(typeId);
     }

@@ -30,7 +30,7 @@ public class User {
     @JoinColumn(name = "profile_id",referencedColumnName = "id")
     private UserProfile userProfile;
 
-    // user can have more than one recipe
+    // user can have more than one task
     @OneToMany(mappedBy = "user")
     @LazyCollection(LazyCollectionOption.FALSE)
     private List<Task> taskList;
@@ -48,7 +48,7 @@ public class User {
         this.userProfile = userProfile;
     }
 
-    public List<Task> getRecipeList() {
+    public List<Task> getTaskList() {
         return taskList;
     }
 
