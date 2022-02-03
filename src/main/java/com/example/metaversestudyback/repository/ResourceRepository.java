@@ -1,6 +1,7 @@
 package com.example.metaversestudyback.repository;
 
 import com.example.metaversestudyback.model.Resource;
+import com.example.metaversestudyback.model.Task;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -12,5 +13,8 @@ public interface ResourceRepository extends JpaRepository<Resource, Long> {
 
     List<Resource> findByTypeId(Long typeId);
 
-    Resource findByTitleAndUserId(String resourceTitle, Long userId);
+//    Resource findByTitleAndUserId(String resourceTitle, Long userId);
+
+
+    Resource findByTitleAndIdIsNot(String resourceTitle,Long resourceId);
 }

@@ -26,10 +26,10 @@ public class Resource {
     @JoinColumn(name = "type_id")
     private Type type;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id")
-    @JsonIgnore
-    private User user;
+//    @ManyToOne
+//    @JoinColumn(name = "user_id")
+//    @JsonIgnore
+//    private User user;
 
     public Resource() {
     }
@@ -90,13 +90,13 @@ public class Resource {
 //        isPublic = isPublic;
 //    }
 
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
+//    public User getUser() {
+//        return user;
+//    }
+//
+//    public void setUser(User user) {
+//        this.user = user;
+//    }
 
 
 //    public boolean isPublic() {

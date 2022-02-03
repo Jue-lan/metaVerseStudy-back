@@ -23,10 +23,10 @@ public class Type {
     @LazyCollection(LazyCollectionOption.FALSE)
     private List<Resource> resourceList;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id")
-    @JsonIgnore
-    private User user;
+//    @ManyToOne
+//    @JoinColumn(name = "user_id")
+//    @JsonIgnore
+//    private User user;
 
     public Type(Long id, String name) {
         this.id = id;
@@ -70,11 +70,11 @@ public class Type {
         this.resourceList = resourceList;
     }
 
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
+//    public User getUser() {
+//        return user;
+//    }
+//
+//    public void setUser(User user) {
+//        this.user = user;
+//    }
 }

@@ -7,7 +7,7 @@ import com.example.metaversestudyback.model.Resource;
 import com.example.metaversestudyback.repository.TypeRepository;
 import com.example.metaversestudyback.repository.ResourceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.context.SecurityContextHolder;
+
 
 import org.springframework.stereotype.Service;
 import com.example.metaversestudyback.exception.InformationExistException;

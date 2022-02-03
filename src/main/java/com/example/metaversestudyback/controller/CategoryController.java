@@ -1,6 +1,7 @@
 package com.example.metaversestudyback.controller;
 
 import com.example.metaversestudyback.model.Task;
+import com.example.metaversestudyback.repository.CategoryRepository;
 import com.example.metaversestudyback.service.CategoryService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -8,6 +9,7 @@ import com.example.metaversestudyback.model.Category;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.http.HttpStatus;
 
 import org.springframework.web.bind.annotation.*;
 
@@ -15,18 +17,25 @@ import java.util.List;
 import java.util.Optional;
 import java.util.logging.Logger;
 
-
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping(path = "/api")
 public class CategoryController {
 
     private CategoryService categoryService;
+//    private CategoryRepository categoryRepository;
+
     private static final Logger LOGGER = Logger.getLogger(CategoryController.class.getName());
 
     @Autowired
     public void setCategoryService(CategoryService categoryService) {
         this.categoryService = categoryService;
     }
+
+//    @Autowired
+//    public void setCategoryRepository(CategoryRepository categoryRepository) {
+//        this.categoryRepository = categoryRepository;
+//    }
 
     // get all categories
     // http://localhost:9093/api/categories

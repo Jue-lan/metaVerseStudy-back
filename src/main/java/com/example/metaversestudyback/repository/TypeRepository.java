@@ -8,9 +8,9 @@ import java.util.List;
 public interface TypeRepository extends JpaRepository<Type, Long> {
     Type findByName(String typeName) ;
 
-    List<Type> findByUserId(Long userId);
-
-    Type findByUserIdAndName(Long userId, String typeName);
-
-    Type findByIdAndUserId(Long categoryId, Long userId);
+//    List<Type> findByUserId(Long userId);
+//
+//    Type findByUserIdAndName(Long userId, String typeName);
+//
+//    Type findByIdAndUserId(Long categoryId, Long userId);
 }
