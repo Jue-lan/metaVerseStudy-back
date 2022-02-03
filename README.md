@@ -4,7 +4,7 @@
 
 In this capstone project, I sought to leverage my new learnings of Java, CRUD applications,and REST APIs to build a study helper for my interests in the MetaVerse. Through this backend production, this app serves as a to do tracker, resource log, and meta news hub for all things related to the meta verse.
 
-Live Link:
+Live Link: https://jue-lan.github.io/metaVerseStudy-back/
 
 ## User Stories
 - User can add items to their study to do list and check them off as completed.
