@@ -33,11 +33,6 @@ Live Link: https://jue-lan.github.io/metaVerseStudy-back/
 
 Request Type    |Action    |URL    |Request Body    |Request Header    |Access
 ------------ |------------ | ------------- | ------------- | ------------- | -------------
-|GET	|get single User	|/auth/user/	|None	|Authorization Bearer TOKEN	|PRIVATE
-|POST	|create single User	|/auth/user/register	|User Details	|None	|PUBLIC
-|POST	|login User	|/auth/user/login	|User login Info	|None	|PUBLIC
-|PUT	|update User	|/auth/user/	|User Details	|Authorization Bearer TOKEN	|PRIVATE
-|DELETE	|delete User	|/auth/user/	|None	|Authorization Bearer TOKEN	|PRIVATE
 |GET	|gets all tasks	|/api/categories/{catgoryid}/tasks	|None	|Authorization Bearer TOKEN	|PRIVATE
 |GET	|get single task	|/api/categories/{catgoryid}/tasks/(tasks1}	|None	|Authorization Bearer TOKEN	|PRIVATE
 |POST	|create single task	|/api/categories/{catgoryid}/tasks	|Task info	|Authorization Bearer TOKEN	|PRIVATE
@@ -101,9 +96,13 @@ Day 1    |Day 2    |Day 3   |Day 4    |Day 5    |Day 6    |Day 7    |Day 8
 
 ## Hurdles
 #### Problem 1
--Solution:
+Run error that took me almost 24 hrs to debug. 
+-Solution: I did not capitalize my B for Bearer token.
 #### Problem 2
--Solution:
+Refracting my backend to get rid of the JWT and Authentication. I had a tragic time communicating my backend to my front end and the added layer burned a lot of time I could have spent elsewhere. However refactoring was a big problem because although I'd corrected my methods even deleated all my security and user files. I was still being prompted to login for the web application.
+-Solution:There was an extra pop dependecy that I needed to also remove.
+```
+```
 
 ##### Frontend Link
 https://github.com/Jue-lan/metaVerseStudy-front
