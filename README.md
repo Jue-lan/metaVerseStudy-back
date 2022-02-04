@@ -92,16 +92,27 @@ Request Type    |Action    |URL    |Request Body    |Request Header    |Access
 ## Project Progression
 Day 1    |Day 2    |Day 3   |Day 4    |Day 5    |Day 6    |Day 7    |Day 8
 ------------ |------------ | ------------- | ------------- | ------------- | -------------| ------------- | -------------
-|Mapped org. ERD, started wireframe, mapped org. project timeline, created database | Mapped endpoints, modified ERD, started on controller and models.| Built out repositories and service. | Completed all files and started testing. Ran into run error.  | Corrected run error. Ran into Auth issues. Started building out front end componants.| Solved backend Auth issues. Backend completed. Started to connect the front and back end with login form. | Unsucessful connection. Started to refactor backend to remove users and authorization dependencies |Sucessfully refactored. Second start to connect backend to front.
+|Mapped org. ERD, started wireframe, mapped org. project timeline, created database | Mapped endpoints, modified ERD, started on controller and models.| Built out repositories and service. | Completed all files and started testing. Ran into run error.  | Corrected run error. Ran into Auth issues. Started building out front end components.| Solved backend Auth issues. Backend completed. Started to connect the front and back end with login form. | Unsuccessful connection. Started to refactor backend to remove users and authorization dependencies |Successfully refactored. Second try at connecting backend to front.
 
 ## Hurdles
 #### Problem 1
 Run error that took me almost 24 hrs to debug. 
 -Solution: I did not capitalize my B for Bearer token.
 #### Problem 2
-Refracting my backend to get rid of the JWT and Authentication. I had a tragic time communicating my backend to my front end and the added layer burned a lot of time I could have spent elsewhere. However refactoring was a big problem because although I'd corrected my methods even deleated all my security and user files. I was still being prompted to login for the web application.
--Solution:There was an extra pop dependecy that I needed to also remove.
+Refactoring my backend to get rid of the JWT and Authentication. I had a tragic time communicating from my backend to my front end and the added layer burned a lot of time I could have spent elsewhere. So I decided to refactor and scrap the idea. However, refactoring a big problem, because although I corrected my methods and even deleted all my security and user files, I was still being prompted to login for the web application.
+-Solution:There was an extra pop dependency that I needed to also remove.
+
+
 ```
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+            <version>0.9.1</version>
+        </dependency>
 ```
 
 ##### Frontend Link
