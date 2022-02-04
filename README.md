@@ -14,11 +14,12 @@ Live Link: https://jue-lan.github.io/metaVerseStudy-back/
 - User can create and manipulate a resource folder that can be organized by topic, and files versus links
 
 ### System Tools
--Intelligi
--Spring Boot
--Maven
--Postman
--PG Admin
+- Intelligi
+- Spring Boot
+- Maven
+- Postman
+- PG Admin
+- LucidCharts
 
 ## ERD
 
