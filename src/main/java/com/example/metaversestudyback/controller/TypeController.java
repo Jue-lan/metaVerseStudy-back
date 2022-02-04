@@ -77,9 +77,9 @@ public class TypeController {
 
     // get resource
     // http://localhost:9092/api/{userId}/types/{typeid}/resources/{resourcesid}
-    @GetMapping(path = "/types/{typeId}/tasks/{taskId}")
+    @GetMapping(path = "/types/{typeId}/resources/{resourceid}")
     public Resource getTypeResource(@PathVariable(value = "typeId") Long typeId,
-                                @PathVariable(value = "taskId") Long resourceId) {
+                                @PathVariable(value = "resourceId") Long resourceId) {
         LOGGER.info("calling getTypeResource method from controller");
         return typeService.getTypeResource(typeId, resourceId);
     }
