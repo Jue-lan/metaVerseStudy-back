@@ -7,11 +7,10 @@ In this capstone project, I sought to leverage my new learnings of Java, CRUD ap
 Live Link: https://jue-lan.github.io/metaVerseStudy-back/
 
 ## User Stories
-- User can add items to their study to do list and check them off as completed.
-- User can view all tasks or sort tasks by category
-- User can edit and view a progress log on a task
-- User can see a feed of current news related to things meta verse (external API)
-- User can create and manipulate a resource folder that can be organized by topic, and files versus links
+- User can add items to their study to do list ~~and check them off as completed~~.
+- User can view all tasks and resource ~~or sort tasks by category or resource type~~
+- ~~User can edit and view a progress log on a task~~
+- User can see a feed of current news related to things meta verse (external API)[almost...appears in console]
 
 ### System Tools
 - Intelligi
@@ -98,10 +97,10 @@ Day 1    |Day 2    |Day 3   |Day 4    |Day 5    |Day 6    |Day 7    |Day 8
 ## Hurdles
 #### Problem 1
 Run error that took me almost 24 hrs to debug. 
--Solution: I did not capitalize my B for Bearer token.
+- Solution: I did not capitalize my B for Bearer token.
 #### Problem 2
 Refactoring my backend to get rid of the JWT and Authentication. I had a tragic time communicating from my backend to my front end and the added layer burned a lot of time I could have spent elsewhere. So I decided to refactor and scrap the idea. However, refactoring a big problem, because although I corrected my methods and even deleted all my security and user files, I was still being prompted to login for the web application.
--Solution:There was an extra pop dependency that I needed to also remove.
+- Solution:There was an extra pop dependency that I needed to also remove.
 
 
 ```
