@@ -100,7 +100,7 @@ Run error that took me almost 24 hrs to debug.
 - Solution: I did not capitalize my B for Bearer token.
 #### Problem 2
 Refactoring my backend to get rid of the JWT and Authentication. I had a tragic time communicating from my backend to my front end and the added layer burned a lot of time I could have spent elsewhere. So I decided to refactor and scrap the idea. However, refactoring a big problem, because although I corrected my methods and even deleted all my security and user files, I was still being prompted to login for the web application.
-- Solution:There was an extra pop dependency that I needed to also remove.
+- Solution:There was an extra pom dependency that I needed to also remove.
 
 
 ```
