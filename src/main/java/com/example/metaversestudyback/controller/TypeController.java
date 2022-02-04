@@ -60,7 +60,7 @@ public class TypeController {
     }
 
     //delete type
-    // http://localhost:9092/api/{userId}/types/{typeid}
+    // http://localhost:9092/api/{userId}/types/{typeId}
     @DeleteMapping("/types/{typeId}")
     public Optional<Type> deleteType(@PathVariable(value = "typeId") Long typeId) {
         LOGGER.info("calling deleteType method from controller");
@@ -68,7 +68,7 @@ public class TypeController {
     }
 
     // get all resources
-    // http://localhost:9092/api/{userId}/types/{typeid}/resources
+    // http://localhost:9092/api/{userId}/types/{typeId}/resources
     @GetMapping(path = "/types/{typeId}/resources")
     public List<Resource> getTypeResources(@PathVariable(value = "typeId") Long typeId) {
         LOGGER.info("calling getTypeResources method from controller");
@@ -76,8 +76,8 @@ public class TypeController {
     }
 
     // get resource
-    // http://localhost:9092/api/{userId}/types/{typeid}/resources/{resourcesid}
-    @GetMapping(path = "/types/{typeId}/resources/{resourceid}")
+    // http://localhost:9092/api/{userId}/types/{typeId}/resources/{resourcesId}
+    @GetMapping(path = "/types/{typeId}/resources/{resourceId}")
     public Resource getTypeResource(@PathVariable(value = "typeId") Long typeId,
                                 @PathVariable(value = "resourceId") Long resourceId) {
         LOGGER.info("calling getTypeResource method from controller");
@@ -95,7 +95,7 @@ public class TypeController {
     }
 
     //update resource
-    // http://localhost:9092/api/{userId}/types/{typeid}/resources/{resourcesid}
+    // http://localhost:9092/api/{userId}/types/{typeId}/resources/{resourcesId}
     @PutMapping(path = "/types/{typeId}/resources/{resourceId}")
     public Resource updateTypeResource(@PathVariable(value = "typeId") Long typeId,
                                    @PathVariable(value = "resourceId") Long resourceId,
@@ -105,7 +105,7 @@ public class TypeController {
     }
 
     // delete resource
-    // http://localhost:9092/api/{userId}/types/{typeid}/resources/{resourcesid}
+    // http://localhost:9092/api/{userId}/types/{typeId}/resources/{resourcesId}
     @DeleteMapping(path = "/types/{typeId}/resources/{resourceId}")
     public Resource deleteTypeResource(@PathVariable(value = "typeId") Long typeId,
                                    @PathVariable(value = "resourceId") Long resourceId) {
