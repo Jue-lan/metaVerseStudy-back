@@ -86,7 +86,7 @@ public class TypeController {
 
     //create resource
     // http://localhost:9092/api/user/{userId}/types/{typeid}/resources
-    @PostMapping("/types/{typeId}/Resources")
+    @PostMapping("/types/{typeId}/resources")
     public Resource createTypeResource(
             @PathVariable(value = "typeId") Long typeId,
             @RequestBody Resource resourceObject) {
@@ -96,7 +96,7 @@ public class TypeController {
 
     //update resource
     // http://localhost:9092/api/{userId}/types/{typeid}/resources/{resourcesid}
-    @PutMapping(path = "/types/{typeId}/Resources/{resourceId}")
+    @PutMapping(path = "/types/{typeId}/resources/{resourceId}")
     public Resource updateTypeResource(@PathVariable(value = "typeId") Long typeId,
                                    @PathVariable(value = "resourceId") Long resourceId,
                                    @RequestBody Resource resourceObject) {
@@ -106,7 +106,7 @@ public class TypeController {
 
     // delete resource
     // http://localhost:9092/api/{userId}/types/{typeid}/resources/{resourcesid}
-    @DeleteMapping(path = "/types/{typeId}/Resources/{resourceId}")
+    @DeleteMapping(path = "/types/{typeId}/resources/{resourceId}")
     public Resource deleteTypeResource(@PathVariable(value = "typeId") Long typeId,
                                    @PathVariable(value = "resourceId") Long resourceId) {
         LOGGER.info("calling deleteTypeResource method from controller");
